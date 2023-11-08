@@ -1,13 +1,368 @@
 body {
+  overflow: auto;
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("./components/pet.png");
+  background-size:contain;
 }
-
+.hidescroll {
+  overflow: hidden!important;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(62, 62, 62);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+.display {
+  opacity: 1!important;
+}
+.container {
+  width: auto;
+  max-width: 1300px;
+  padding-right: var(--bs-gutter-x,.75rem);
+  padding-left: var(--bs-gutter-x,.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+/*.contact .row {
+  width: 100%;
+}*/
+.row {
+  display: flex;
+  z-index: 1;
+}
+.img1 {
+  max-width: 100%;
+  width: 95%;
+  padding-top: 80px;
+  border-radius: 200px;
+}
+.img2 {
+  max-width: 60%;
+  width: 55%;
+  border-radius: 10px;
+  height: 130px;
+}
+.text-center {
+  text-align: center;
+}
+.bgred {
+  background-color: red;
+}
+.btn {
+  outline: 0;
+  border: 0;
+  font-size: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color:rgb(34, 17, 17);
+  font-weight: 500;
+  z-index: 1;
+  background-color: #7f939a;
+  padding:  10px 50px;
+  margin: 0 0.5rem;
+}
+.btn2 {
+  outline: 0;
+  border: 0;
+  font-size: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color:rgb(34, 17, 17);
+  font-weight: 500;
+  z-index: 1;
+  background-color: #7f939a;
+  padding:  10px 150px;
+  margin: 0 0.5rem;
+}
+.btn:hover {
+  background-color: #045faa;
+  color: white;
+}
+.btn2:hover {
+  background-color: #3a928e;
+  color: rgb(247, 244, 244);
+}
+.btn1 {
+  outline: 0;
+  border: 0;
+  font-size: 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  color:rgb(233, 221, 221);
+  font-weight: 500;
+  z-index: 1;
+  background-color: #324348;
+  padding:  10px 50px;
+  margin: 0 0.5rem;
+}
+.btn1:hover {
+  background-color: #047baa;
+  color: white;
+}
+
+.col-md-12 {
+  width: 100%;
+}
+.col-md-6 {
+  width: 49.9%;
+  background-color: #b6aaaa;
+  border-radius: 20px;
+}
+.col-md-3 {
+  margin: 0 1rem!important;
+  width:100%;
+}
+
+.col-md-4 {
+  width:33.3%;
+}
+.col-md-4:first-child {
+  margin-right: 1rem;
+
+}
+.col-md-4:last-child {
+  margin-left: 1rem;
+
+}
+
+.x {
+  margin: 0rem 1rem!important;
+  width:33.3%;
+}
+/* Navbar */
+.navopened {
+  background-color: #010606!important;
+}
+.navopened .logo {
+  color: #fafafa!important;
+}
+.navopened ul li a {
+  color: #fafafa!important;
+}
+.navopened .burger {
+  background-color: #010606!important;
+}
+.navbar {
+  transition: background-color 0.4s;
+  position: fixed;
+  top: 0;
+  width: 100% ;
+  padding: 0.5rem;
+  background-color: transparent;
+  z-index: 2;
+  backdrop-filter: blur(2px);
+}
+.navbar .logo {
+  transition: all 0.2s;
+
+  align-items: center;
+  align-content: center;
+  color: rgb(243, 243, 243);
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin: 0;
+  font-size: 28px;
+  padding-top: 10px;
+}
+.navbar ul { 
+  transition: all 0.2s;
+
+  margin-left: 17rem;
+  list-style: none;
+}
+.navbar ul li {
+  margin: 0 1rem;
+  display: inline-block;
+}
+.navbar ul li a {
+  transition: all 0.2s;
+  font-size: 20px;
+  cursor: pointer;
+
+  text-decoration: none;
+  color: rgb(243, 243, 243);
+  font-weight: 500;
+
+}
+.button {
+  cursor: pointer;
+  transition: transform 0.2s linear;
+  position: fixed;
+  transform:translateX(300%);
+  top: 20px;
+  right: 15px;
+  z-index: 1;
+}
+.burger {
+  transition: all 0.2s;
+
+  margin-bottom: 0.45rem;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+/* Header */
+
+.headerbg {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  top: 0;
+  /*background-color: rgb(12, 12, 12);*/
+  opacity: 0.7;
+
+}
+header {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+}
+header h2 {
+  z-index: 1;
+  color: rgb(238, 235, 235);
+  font-size: 40px;
+  font-family: "Papyrus", "Courier New", fantasy;
+}
+.opened {
+  transform: translateX(0%)!important;
+}
+/* main */
+.main-title {
+  padding-top: 40px;
+  font-size: 48px;
+  color: #123648;
+  font-family: "Papyrus", "Courier New", fantasy;
+}
+.main-p {
+  padding-top: 0px;
+  font-size: 22px;
+  font-weight: 500;
+  font-family: "Papyrus", "Courier New", fantasy;
+}
+main {
+  padding: 3rem 0;
+  background-color: #b6aaaa;
+  width: 100%;
+}
+/* footer */
+.text-white {
+  color: white;
+}
+.footer-top {
+  margin: 0;
+  padding: 0.1rem 0;
+  background-color: #01bf71;
+}
+.footer-top p {
+  font-size: 18px;
+}
+.footer-text {
+  margin-top: 2.5px;
+
+  font-size: 18px;
+  color:#919191;
+}
+footer {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 1rem 0;
+  background-color:#010606;
+}
+.side1 {
+  width: 50%;
+}
+.side2 {
+  width: 50%;
+
+}
+footer .col-md-3 {
+  height: 100%;
+}
+footer .logo {
+  transition: all 0.2s;
+  margin-bottom: 0;
+  align-items: center;
+  align-content: center;
+  color: rgb(129, 120, 120);
+  letter-spacing: 2px;
+  font-weight: 400;
+
+  font-size: 28px;
+}
+.logo a{
+  text-decoration: none;
+  color: #a09090;
+  
+}
+.footer-title {
+  color: #fafafa;
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 0;
+  word-wrap:initial;
+}
+footer ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 2.5px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #919191;
+  font-size: 18px;
+  font-weight: 500;
+}
+.gotop {
+  transition: all 0.2s;
+  background-color: #1681ae;
+  position: fixed;
+  border-radius: 25px;
+  padding: 1rem;
+  border: 0;
+  opacity: 0;
+  outline: 0;
+  cursor: pointer;
+  font-weight: 1000;
+  box-shadow: 0px 0px 5px 0.2px #000000;
+  color: white;
+  bottom: 20px;
+  right: 15px;
+  
+}
+
+.p-3 {
+  padding: 0.2rem 1rem;
+}
+
+ul li a {
+  cursor: pointer;
+}
+.about {
+  margin-bottom: 10rem;
+}
+
+
